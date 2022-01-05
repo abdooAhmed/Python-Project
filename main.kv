@@ -1,0 +1,36 @@
+<Main>:
+    AnchorLayout:
+        anchor_x:'left'
+        anchor_y:'top'
+        Tool:
+            id:_tool_box
+            draw_space:draw_space
+            comic_d:root
+            size_hint:None,None
+            width:100
+    AnchorLayout:
+        anchor_x:'right'
+        anchor_y:'top'
+        Draw:
+            size_hint:None,None
+            id:draw_space
+            status_bar: _status_bar
+            tool_box:_tool_box
+            general_options: _gen_
+            width: root.width - _tool_box.width-10
+            height:root.height-_gen_.height-_status_bar.height
+    AnchorLayout:
+        anchor_x:'center'
+        anchor_y:'bottom'
+        BoxLayout:
+            orientation:'vertical'
+            General:
+                id:_gen_
+                drawing_space:draw_space
+                comic_d: root
+                size_hint:1,None
+                height:48
+            Status:
+                id:_status_bar
+                size_hint:1,None
+                height:30

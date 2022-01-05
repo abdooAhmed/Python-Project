@@ -1,0 +1,19 @@
+<comic>
+    AnchorLayout:
+        anchor_x: 'left'
+        anchor_y: 'top'
+        Tool:
+            id: _tool_box
+            draw_space:draw_space
+            comic_d:root
+            size_hint: None, None
+            width: 100
+    AnchorLayout:
+        anchor_x: 'right'
+        anchor_y: 'top'
+        Draw:
+            size_hint:None,None
+            id:draw_space
+            tool_box:_tool_box
+            height:root.height
+            width:root.width-_tool_box.width-10

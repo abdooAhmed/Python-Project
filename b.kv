@@ -1,0 +1,12 @@
+<myw>:
+    BoxLayout:
+        orientation: 'vertical'
+        Camera:
+            id: camera
+            play: False
+        ToggleButton:
+            text: 'Play'
+            on_press: camera.play = not camera.play
+            size_hint_y: None
+            height: '48dp'
+

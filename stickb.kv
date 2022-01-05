@@ -1,0 +1,25 @@
+<Toolb>:
+    size_hint:None,None
+    size:48,48
+    group:'tool'
+    canvas:
+        PushMatrix:
+        Translate:
+            xy: self.x,self.y
+    canvas.after:
+        PopMatrix:
+<Tool@GridLayout>:
+    cols:2
+    padding:10
+    ToolCircle:
+        canvas:
+            Line:
+                circle: 24,24,14
+    ToolL:
+        canvas:
+            Line:
+                points:10,10,40,40
+    ToggleStick:
+        Stick:
+
+

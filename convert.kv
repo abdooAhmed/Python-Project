@@ -1,0 +1,64 @@
+<Layout>:
+   canvas:
+      Color:
+         rgba: 1, 1, 1, 1
+      Rectangle:
+         pos: self.pos
+         size: self.size
+<grid>:
+   page:1
+   border:80
+   swipe_threshold: .6
+   FloatLayout:
+      ToggleButton:
+         text:'F1'
+         size_hint: .3,.3
+         pos:root.x,root.y
+   RelativeLayout:
+      Button:
+         text:'R1'
+         size_hint: .3,.3
+         pos:0,0
+   GridLayout:
+      cols:  2
+      spacing: 10
+      Button:
+         text: 'G1'
+         size_hint_x: None
+         width: 50
+      Button:
+         text: 'G2'
+      Button:
+         text: 'G3'
+         size_hint_x: None
+         width: 50
+   AnchorLayout:
+      anchor_x:'right'
+      anchor_y:'top'
+      Button:
+         text:'a1'
+         size_hint: .5, .5
+      Button:
+         text:'a2'
+         size_hint: .3,.3
+   BoxLayout:
+      orientation: 'horizontal'
+      Button:
+         text:'b1'
+      Button:
+         text:'b2'
+         size_hint:2,.3
+         pos_hint:{'y':.4}
+      Button:
+         text:'b3'
+   StackLayout:
+      orientation:'lr-bt'
+      Button:
+         text:'s1'
+         size_hint:.3,.3
+      Button:
+         text:'s2'
+         size_hint:.3,.3
+      Button:
+         text:'s3'
+         size_hint:.4,.4

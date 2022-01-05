@@ -1,0 +1,31 @@
+manager:
+    MainScreen:
+    secondScreen:
+<MainScreen>:
+    name:'mains'
+    GridLayout:
+        cols:1
+        GridLayout:
+            cols:2
+            Label:
+                text:'name'
+            TextInput:
+                id:input
+                multiline:False
+        Button:
+            text:'submit'
+            on_release:
+                app.root.current='seconds' if input.text=='abdo' else 'mains'
+                input.text:''
+                root.manager.transition.direction='left'
+<secondScreen>:
+    name:'seconds'
+    Button:
+        text:'go back'
+        on_release:
+            root.btn()
+<p>:
+    Label:
+        text:'prees on my'
+        size_hint:.6,.2
+        pos_hint:{'x':.1,'y':.2}
